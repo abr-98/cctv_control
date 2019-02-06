@@ -5,6 +5,7 @@ import datetime
 from gtts import gTTS
 from face_detect_sec import read_image
 import os
+from file_handler import folder_check
 from subprocess import call
 def capture():
     t1= int(round(time.time()))
@@ -45,8 +46,8 @@ def capture():
                 myobj.save("welcome.mp3")
                 os.system("mpg321 welcome.mp3")
                 os.remove("welcome.mp3")
-                exec_code=call("python3 recognizer.py --encodings encodings.pickle --image"+ img_name)
 
+                folder_check(img_name)
                 #os.remove(img_name)
                 break;
             else:
