@@ -85,7 +85,7 @@ def database():
        root.destroy()
    if isvalidemail(email):
        messagebox.showerror(
-       exec_code=call("python3 /home/abhijit/atom_projects/face_lock/register.py",shell=True)
+       
                "Invalid Mail.",
                "Please try again and enter a new email."
            )
